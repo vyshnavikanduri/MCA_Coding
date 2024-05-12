@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class Armstrong
+{
+	void armstrongNumber(int n)
+	{
+//extracting indivdual numbers and then power method to calculate cube of each value and then add them up
+		int firstpos=n/100;
+		int secpos=(n/10)%10;
+		int thirdpos=n%10;
+		int num=(int)(Math.pow(firstpos,3)+Math.pow(secpos,3)+Math.pow(thirdpos,3));
+		if(num==n)
+			System.out.println("Yes");
+		else
+			System.out.println("No");
+	}
+}
+class MainWork2
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+//create an obj for Armstrong class and then invoke the method 
+		Armstrong obj=new Armstrong();
+		obj.armstrongNumber(n);
+	}
+}
