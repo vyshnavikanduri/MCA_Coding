@@ -1,0 +1,10 @@
+//created a public class and then a method is created if n is divide with2  and yields remainder 0 then it is even else odd
+public class OddEven {
+    public static String oddEven(int N) {
+        if (N % 2 == 0) {
+            return "even";
+        } else {
+            return "odd";
+        }
+    }
+}
