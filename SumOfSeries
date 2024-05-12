@@ -1,0 +1,22 @@
+import java.util.Scanner;
+//use SumOfSeries class and in it take sum method calculate the sum of the series using formula (n*(n+1))/2
+class SumOfSeries
+{
+	int sum(int n)
+	{
+		return (n*(n+1))/2;
+	}
+}
+class MainWork
+{
+	public static void main(String[] args)
+	{
+	Scanner sc=new Scanner(System.in);
+	int n=sc.nextInt();
+//read input from user
+	SumOfSeries obj=new SumOfSeries();
+	int ans=obj.sum(n);
+//create an object and then invoke the method
+	System.out.println(ans);
+	}
+}
