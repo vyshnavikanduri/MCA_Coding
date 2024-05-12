@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.util.Arrays;
+class CalMedian
+{
+	int medianValue(int[] arr)
+	{
+		Arrays.sort(arr);
+		int n=arr.length;
+//sort array and then find the array length if length is even avergae of middle two values is ans else middle value is ans
+		if(n%2==0)
+			return ((arr[n/2]+arr[(n-1)/2])/2);
+		else
+			return arr[n/2];
+	}
+}
+class MainWork1
+{
+	public static void main(String[]args)
+	{
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+//read array length from user and then take array elements and create obj for CalMedian class and invoke the medianValue method over it and display the ans
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++)
+			arr[i]=sc.nextInt();
+		CalMedian obj=new CalMedian();
+		int ans=obj.medianValue(arr);
+		System.out.println(ans);
+	}
+}
