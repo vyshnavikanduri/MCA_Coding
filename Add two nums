@@ -1,0 +1,7 @@
+public class AddNums
+{
+        int addTwoNums(long a,long b)
+        {
+            return a+b;
+        }
+}
