@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class ReverseNumber {
+    public static long reverseDigit(long N) {
+        long reversedNum = 0;
+
+        while (N > 0) {
+            // Extract the last digit
+            long lastDigit = N % 10;
+            // Append the last digit to the reversed number
+            reversedNum = (reversedNum * 10) + lastDigit;
+            // Remove the last digit from the original number
+            N /= 10;
+        }
+
+        return reversedNum;
+    }
+
+    public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int N=sc.nextInt();
+	System.out.println(reverseDigit(N));
+    }
+}
